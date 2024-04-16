@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang chủ - Công ty Dược phẩm Mắt Sáng</title>
+  <link rel="stylesheet" href="shineweb.css">
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <ul class="nav-ul">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Dịch vụ</a></li>
+        <li><a href="#">Về chúng tôi</a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Khuyến mãi</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="slideshow-container">
+    <img class="slide-img" src="./assets/images/eye.jpg" alt="Slide 1">
+    <img class="slide-img" src="./assets/images/nguoigia.jpg" alt="Slide 2">
+    <img class="slide-img" src="./assets/images/doubleye.jpg" alt="Slide 3">
+
+    <!-- Nút điều khiển -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+    <div class="header">
+      <img src="./assets/images/shine.png" alt="Ảnh của bạn">
+      <div class="header-content">
+        <ul class="nav-ul">
+          </ul>
+        <p class="slogan">UNLOCK THE BEAUTY OF EYES WITH SHINE</p>
+        <ul class="nav-ul">
+        
+      </ul>
+      </div>
+      <h1>Công ty Dược phẩm Mắt Sáng</h1>
+      <p>Chuyên cung cấp các sản phẩm thuốc mắt chất lượng cao</p>
+      <section id="about">
+        <h2>Về chúng tôi</h2>
+        <p>Công ty Dược phẩm Mắt Sáng là một công ty chuyên sản xuất và phân phối thuốc mắt chất lượng cao. Chúng tôi cam kết mang lại cho khách hàng những sản phẩm an toàn và hiệu quả để chăm sóc sức khỏe mắt.</p>
+      </section>
+      <div class ="content">
+      <section id="products">
+        <h2>Sản phẩm</h2>
+        <br/>
+        <ul>
+          <li>Thuốc nhỏ mắt A</li>
+          <li>Thuốc nhỏ mắt B</li>
+          <li>Thuốc nhỏ mắt C</li>
+        </ul>
+      </section>
+      
+      <section id="services">
+        <h2>Dịch vụ</h2>
+        <br/>
+        <ul>
+          <li>Tư vấn sử dụng thuốc mắt</li>
+          <li>Đo thị lực và kiểm tra mắt</li>
+          <li>Bán lẻ và giao hàng thuốc mắt</li>
+        </ul>
+      </section>
+    </div>
+    </div>
+    
+  
+  <main>
+    
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Công ty Dược phẩm Mắt Sáng. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide-img');
+    const intervalTime = 2000; // Thời gian tự động chuyển slide (ms)
+
+    // Tự động chuyển slide
+    setInterval(() => {
+        plusSlides(1);
+    }, intervalTime);
+
+    // Hàm chuyển slide
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Hàm hiển thị slide
+    function showSlides(n) {
+        if (n >= slides.length) {
+            slideIndex = 0;
+        } else if (n < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        // Ẩn tất cả các slide
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        // Hiển thị slide hiện tại
+        slides[slideIndex].style.display = "block";
+    }
+</script>
+
+</body>
+</html>
